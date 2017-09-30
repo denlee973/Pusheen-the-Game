@@ -62,6 +62,7 @@ rat4L = pygame.image.load('rat4L.png')
 rat5L = pygame.image.load('rat5L.png')
 ratL = [rat1L,rat2L,rat3L,rat4L,rat5L]
 
+
 table = pygame.image.load('table.png')
 tree = pygame.image.load('tree.png')
 frame = pygame.image.load('frame.jpg')
@@ -330,6 +331,7 @@ def redraw_screen():
     character(scrn)
     scrn = donutBlit(scrn)
     laserLoc[0] = shoot(laserLoc[0],laserLoc[1],scrn,fired)
+
     pygame.display.update()
 
 # Main Program
@@ -392,8 +394,6 @@ while inPlay:
         if pusheenLoc[1] < 580:
             pusheenLoc[1] += 3
 
-    #global variables for position values
     redraw_screen()                     # the screen window must be constantly redrawn - animation
     pygame.time.delay(4)                # pause for 2 miliseconds
-                                        
 pygame.quit()                           # always quit pygame when done!
